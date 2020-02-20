@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: task-sample
+  rabbitmq:
+    host: 192.168.195.129
+    port: 5672
+    username: admin
+    password: admin
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: testChannel
+
+logging:
+  level.org.springframework.cloud.task: DEBUG
+  level.top.quyq.task.processor: DEBUG
+server:
+  port: 9000

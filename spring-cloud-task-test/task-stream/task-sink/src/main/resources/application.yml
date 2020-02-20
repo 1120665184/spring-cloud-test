@@ -1,0 +1,23 @@
+
+spring:
+  rabbitmq:
+    host: 192.168.195.129
+    port: 5672
+    username: admin
+    password: admin
+  application:
+    name: task-stream-sink
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: testChannel
+maven:
+  remoteRepositories:
+    personalRepo:
+      url: file://D:/.m2/repository
+server:
+  port: 9001
+logging:
+  level.org.springframework.cloud.task: DEBUG
+  level.quyq.top.task.sink: DEBUG

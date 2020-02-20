@@ -1,0 +1,33 @@
+
+spring:
+  cloud:
+    stream:
+      poller:
+        fixed-delay: 3600000
+      function:
+        definition: nameUp|nameModify;testSource;testSink;rabbitControllerSupplier;rabbitControllerConsumer;rabbitControllerSupplier1;rabbitSendToConsumer;rabbitSendToConsumer2
+        bindings:
+          nameUp|nameModify-out-0: nameUpModifyOut
+          nameUp|nameModify-in-0: nameUpModifyIn
+      bindings:
+        nameUpModifyOut:
+          destination: transformed
+        testSink-in-0:
+          destination: transformed
+        nameUpModifyIn:
+          destination: testtock
+        testSource-out-0:
+          destination: testtock
+        rabbitControllerSupplier-out-0:
+          destination: rabbitController
+        rabbitControllerConsumer-in-0:
+          destination: rabbitController
+        rabbitSendToConsumer-in-0:
+          destination: sendto-rabbit-1
+        rabbitSendToConsumer2-in-0:
+          destination: sendto-rabbit-2
+  rabbitmq:
+    host: 192.168.195.129
+    port: 5672
+    username: admin
+    password: admin

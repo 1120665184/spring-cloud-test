@@ -1,0 +1,6 @@
+
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-deployer-local:1.3.0.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
+}

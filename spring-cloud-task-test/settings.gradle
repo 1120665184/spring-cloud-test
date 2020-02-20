@@ -1,0 +1,6 @@
+rootProject.name = 'spring-cloud-task-test'
+include ':task-sample'
+include ':task-stream:task-processor'
+include ':task-stream:timestamp'
+include 'task-stream:task-sink'
+

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Demo Timestamp Task
+logging:
+  level.org.springframework.cloud.task: DEBUG
