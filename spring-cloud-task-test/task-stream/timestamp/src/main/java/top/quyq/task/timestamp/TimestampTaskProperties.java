@@ -1,4 +1,4 @@
-package top.quyq.task.processor.timestamp;
+package top.quyq.task.timestamp;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

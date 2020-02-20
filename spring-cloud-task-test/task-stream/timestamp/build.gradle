@@ -1,22 +1,23 @@
 
 apply plugin:'maven'
 
-// 指定上传的路径
-def localMavenRepo = 'file://' + new File('D:/','.m2/repository').absolutePath
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
+}
 
-// 上传Task，Gradle会生成并上传pom.xml文件。
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: localMavenRepo)
 
-            //构造项目的Pom文件
-            pom.project {
-                name = project.name
-                packaging = 'jar'
-                description = 'description'
+//将项目打包到本地maven库
+install {
+    repositories.mavenInstaller{
+        pom {
+            groupId='top.quyq'
+            artifactId='timestamp'
+            version='0.0.1-SNAPSHOT'
+            project {
+                packaging='jar'
             }
         }
-
     }
 }
+
+

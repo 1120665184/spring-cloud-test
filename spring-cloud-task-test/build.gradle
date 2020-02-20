@@ -36,7 +36,7 @@ allprojects {
     }
 }
 
-def holderProjects = Arrays.asList('task-stream')
+def holderProjects = Arrays.asList('task-stream','task-batch')
 
 configure(subprojects) { subProject ->
     if( !holderProjects.contains(subProject.name)){

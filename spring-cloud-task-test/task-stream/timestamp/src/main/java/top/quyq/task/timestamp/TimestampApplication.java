@@ -1,4 +1,4 @@
-package top.quyq.task.processor.timestamp;
+package top.quyq.task.timestamp;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

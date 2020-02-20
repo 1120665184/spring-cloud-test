@@ -13,9 +13,10 @@ spring:
         input:
           destination: testChannel
 maven:
-  remoteRepositories:
-    personalRepo:
-      url: file://D:/.m2/repository
+#  remoteRepositories:
+#    personalRepo:
+#      url: file://D:/.m2/repository
+  local-repository: D:/.m2/repository
 server:
   port: 9001
 logging:
