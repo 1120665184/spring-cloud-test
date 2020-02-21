@@ -1,0 +1,25 @@
+
+apply plugin:'maven'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'org.springframework.batch:spring-batch-integration'
+    implementation 'org.springframework.cloud:spring-cloud-deployer-local:2.1.1.RELEASE'
+    implementation 'mysql:mysql-connector-java'
+    //runtimeOnly 'com.h2database:h2'
+}
+
+
+//将项目打包到本地maven库
+install {
+    repositories.mavenInstaller{
+        pom {
+            groupId='top.quyq'
+            artifactId='partitioned-batch-job'
+            version='0.0.1-SNAPSHOT'
+            project {
+                packaging='jar'
+            }
+        }
+    }
+}

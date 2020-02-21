@@ -2,5 +2,8 @@ rootProject.name = 'spring-cloud-task-test'
 include ':task-sample'
 include ':task-stream:task-processor'
 include ':task-stream:timestamp'
-include 'task-stream:task-sink'
+include ':task-stream:task-sink'
+include ':task-batch:batch-job'
+include ':task-batch:partitioned-batch-job'
+
 

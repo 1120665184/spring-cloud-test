@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: PartitionedBatchJobTask
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch_test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    deployer:
+      local:
+        use-spring-application-json: false
+maven:
+  local-repository: D:/.m2/repository
+logging:
+  level.org.springframework.cloud.task: DEBUG
