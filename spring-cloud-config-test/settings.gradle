@@ -1,4 +1,4 @@
 rootProject.name = 'spring-cloud-config-test'
 include ':service:git-service'
-
+include ':client:samp-client'
 

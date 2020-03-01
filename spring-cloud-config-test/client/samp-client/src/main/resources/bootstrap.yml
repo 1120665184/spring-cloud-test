@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      #配置客户端快速失败
+      fail-fast: true
+     # label: test-label
+  profiles:
+    active: dev
+  application:
+    name: samp-client

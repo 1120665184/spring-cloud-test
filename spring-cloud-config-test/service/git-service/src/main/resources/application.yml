@@ -1,2 +1,9 @@
 server:
   port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/1120665184/spring-cloud-test
+          search-paths: config-file
