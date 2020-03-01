@@ -6,4 +6,9 @@ spring:
       server:
         git:
           uri: https://github.com/1120665184/spring-cloud-test
+          #配置文件搜索路径
           search-paths: config-file/{application}
+          #从远程仓库强制拉取
+          force-pull: true
+          #强制从本地库中删除未跟踪的分支
+          delete-untracked-branches: true

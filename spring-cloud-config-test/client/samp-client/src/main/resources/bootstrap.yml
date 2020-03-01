@@ -4,6 +4,7 @@ spring:
       #配置客户端快速失败
       fail-fast: true
      # label: test-label
+      uri: http://localhost:8888,http://localhost:8889,http://user:123456@localhost:8890
   profiles:
     active: dev
   application:

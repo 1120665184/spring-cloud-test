@@ -38,7 +38,7 @@ allprojects {
 }
 
 
-def holderProjects = Arrays.asList('server','client')
+def holderProjects = Arrays.asList('service','client')
 
 configure(subprojects) { subProject ->
     if( !holderProjects.contains(subProject.name)){

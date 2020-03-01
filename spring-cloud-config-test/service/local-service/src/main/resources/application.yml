@@ -1,0 +1,10 @@
+server:
+  port: 8889
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///D:/system_data/deskTop/personal-project/spring-cloud-test/config-file/{application}

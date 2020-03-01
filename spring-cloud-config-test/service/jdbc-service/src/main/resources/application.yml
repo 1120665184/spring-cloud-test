@@ -1,0 +1,21 @@
+
+spring:
+  profiles:
+    active: jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3306/config_jdbc_test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    config:
+      server:
+        jdbc:
+          #重写SQL
+          sql: SELECT `KEY`, `VALUE` from PROPERTIES where APPLICATION=? and PROFILE=? and LABEL=?
+  security:
+    user:
+      #配置 user 密码，不配置会随机生成
+      password: 123456
+server:
+  port: 8890
