@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: consomer-one
+  cloud:
+    loadbalancer:
+      #禁用ribbon，使用 spring cloud LoadBalancer
+      ribbon:
+        enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+    #禁止服务发现
+    #enabled: false
+    healthcheck:
+      enabled: true
+    #prefer-same-zone-eureka: true
+  instance:
+    appname: edit-consomer-one
+    #自定义状态页
+    #status-page-url-path: /info
+    #non-secure-port-enabled: false
+    #secure-port-enabled: true
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 10
+    metadata-map:
+      zone: zone1
+server:
+  port: 8080
+#打开健康检查的所有特征
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

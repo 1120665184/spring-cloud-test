@@ -1,0 +1,10 @@
+rootProject.name = 'spring-cloud-netflix-test'
+//*********服务发现模块
+include 'service-discovery:standalone-eureka'
+include 'service-discovery:peer-eureka-one'
+include 'service-discovery:peer-eureka-two'
+include 'service-discovery:peer-eureka-three'
+
+//*********消费者模块
+include 'consomer:consomer-one'
+

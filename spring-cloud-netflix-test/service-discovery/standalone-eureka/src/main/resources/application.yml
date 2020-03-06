@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: standalone-eureka
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+server:
+  port: 8761
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.ip-address}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  #修改元数据部分
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+logging:
+  level.org.springframework.cloud.netflix: DEBUG
