@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: consomer-ribhys-consomer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8760/eureka
+  instance:
+    metadata-map:
+      zone: "local"
+logging:
+  level.quyq.top.netflix.ribhys: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

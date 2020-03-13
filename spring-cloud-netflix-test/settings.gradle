@@ -4,7 +4,12 @@ include 'service-discovery:standalone-eureka'
 include 'service-discovery:peer-eureka-one'
 include 'service-discovery:peer-eureka-two'
 include 'service-discovery:peer-eureka-three'
+include 'service-discovery:standalone-ribbon'
 
 //*********消费者模块
 include 'consomer:consomer-one'
-
+include 'consomer-ribbon_hystrix:consomer-ribhys-provider'
+include 'consomer-ribbon_hystrix:consomer-ribhys-provider-two'
+include 'consomer-ribbon_hystrix:consomer-ribhys-consomer'
+//消费者公共模块
+include 'consomer-ribbon_hystrix:common-api'

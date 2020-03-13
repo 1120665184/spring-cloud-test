@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consomer-ribhys-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8760/eureka
+  instance:
+    metadata-map:
+      zone: "local"
+logging:
+  level.quyq.top.netflix.ribhys: debug
